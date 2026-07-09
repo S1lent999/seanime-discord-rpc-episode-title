@@ -1,0 +1,21 @@
+{
+  "id": "discord-rpc-episode-title",
+  "version": "1.0.0",
+  "name": "Discord RPC Episode Title",
+  "description": "Shows anime episode title with SXXEXX format in Discord RPC (e.g., S01E38 - Episode Title)",
+  "author": "S1lent",
+  "type": "plugin",
+  "language": "typescript",
+  "manifestURI": "https://raw.githubusercontent.com/S1lent/seanime-discord-rpc-episode-title/main/discord-rpc-episode-title.json",
+  "payloadURI": "https://raw.githubusercontent.com/S1lent/seanime-discord-rpc-episode-title/main/discord-rpc-episode-title.ts",
+  "icon": "https://raw.githubusercontent.com/Seanime-contributions/Seanime-Providers/main/icon.png",
+  "website": "https://github.com/S1lent/seanime-discord-rpc-episode-title",
+  "readme": "Shows episode titles in Discord RPC with SXXEXX format. Requires Seanime 3.9.1-alpha.7+ for episodeTitle field.",
+  "lang": "en",
+  "plugin": {
+    "version": 1,
+    "permissions": {
+      "scopes": ["app.discordPresence"]
+    }
+  }
+}
