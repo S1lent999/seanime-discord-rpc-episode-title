@@ -13,24 +13,28 @@
     "version": "1",
     "permissions": {
       "scopes": ["discord", "storage"]
-    },
-    "addUserConfig": [
+    }
+  },
+  "userConfig": {
+    "requiresConfig": false,
+    "version": 1,
+    "fields": [
       {
-        "key": "disableLink",
-        "type": "switch",
+        "name": "disableLink",
         "label": "Disable Anilist link from title",
-        "default": true
-      },
-      {
-        "key": "showEpisodeNumber",
         "type": "switch",
-        "label": "Show episode number",
-        "default": true
+        "default": "true"
       },
       {
-        "key": "displayFormat",
-        "type": "select",
+        "name": "showEpisodeNumber",
+        "label": "Show episode number",
+        "type": "switch",
+        "default": "true"
+      },
+      {
+        "name": "displayFormat",
         "label": "Display Format",
+        "type": "select",
         "default": "seasonEpisodeTitle",
         "options": [
           { "label": "S01E05 - Title", "value": "seasonEpisodeTitle" },
