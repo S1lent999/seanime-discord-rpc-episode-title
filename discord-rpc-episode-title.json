@@ -6,35 +6,31 @@
   "author": "S1lent999",
   "type": "plugin",
   "language": "typescript",
-  "manifestURI": "https://raw.githubusercontent.com/S1lent999/seanime-discord-rpc-episode-title/refs/heads/dev/discord-rpc-episode-title.json",
-  "payloadURI": "https://raw.githubusercontent.com/S1lent999/seanime-discord-rpc-episode-title/refs/heads/dev/discord-rpc-episode-title.ts",
-  "icon": "https://raw.githubusercontent.com/S1lent999/seanime-discord-rpc-episode-title/refs/heads/dev/discord-logo.jpg",
+  "manifestURI": "https://raw.githubusercontent.com/S1lent999/seanime-discord-rpc-episode-title/refs/heads/main/discord-rpc-episode-title.json",
+  "payloadURI": "https://raw.githubusercontent.com/S1lent999/seanime-discord-rpc-episode-title/refs/heads/main/discord-rpc-episode-title.ts",
+  "icon": "https://raw.githubusercontent.com/S1lent999/seanime-discord-rpc-episode-title/refs/heads/main/discord-logo.jpg",
   "plugin": {
     "version": "1",
     "permissions": {
       "scopes": ["discord", "storage"]
-    }
-  },
-  "userConfig": {
-    "requiresConfig": false,
-    "version": 1,
-    "fields": [
+    },
+    "addUserConfig": [
       {
-        "name": "disableLink",
+        "key": "disableLink",
+        "type": "switch",
         "label": "Disable Anilist link from title",
-        "type": "switch",
-        "default": "true"
+        "default": true
       },
       {
-        "name": "showEpisodeNumber",
+        "key": "showEpisodeNumber",
+        "type": "switch",
         "label": "Show episode number",
-        "type": "switch",
-        "default": "true"
+        "default": true
       },
       {
-        "name": "displayFormat",
-        "label": "Display Format",
+        "key": "displayFormat",
         "type": "select",
+        "label": "Display Format",
         "default": "seasonEpisodeTitle",
         "options": [
           { "label": "S01E05 - Title", "value": "seasonEpisodeTitle" },
