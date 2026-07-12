@@ -10,6 +10,8 @@ A Seanime extension that displays anime episode titles in Discord Rich Presence 
 ✅ Uses anime title as the activity name ("Watching Bleach")
 
 ✅ Fallback to simple episode number if title is unavailable
+
+✅ Optionally disable the clickable anime link from the Seanime tray icon
  
 <img width="447" height="180" alt="image" src="https://github.com/user-attachments/assets/bfe8e7ce-942d-43e7-afe5-21685fb83206" />
 
