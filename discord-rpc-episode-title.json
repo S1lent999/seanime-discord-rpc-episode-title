@@ -1,6 +1,6 @@
 {
   "id": "discord-rpc-episode-title",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "Discord RPC Episode Title",
   "description": "Shows anime episode title with SXXEXX format in Discord RPC",
   "author": "S1lent999",
