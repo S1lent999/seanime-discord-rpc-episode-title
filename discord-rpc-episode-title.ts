@@ -16,20 +16,24 @@ function init() {
                     const season = e.animeActivity.season || 1;
                     const seasonStr = String(season).padStart(2, '0');
                     const episodeStr = String(episodeNumber).padStart(2, '0');
-
                     e.name = animeTitle;
                     e.details = animeTitle;
                     e.state = `S${seasonStr}E${episodeStr} - ${episodeTitle}`;
+
+                    e.detailsUrl = "";
+                    e.largeUrl = "";
                 } else {
                     e.state = `Episode ${episodeNumber}`;
+                    e.detailsUrl = "";
+                    e.largeUrl = "";
                 }
             }
         } catch (err) {
-            $debug.error("[Discord RPC Episode Title] Error:", err);
+            $debug.error("[Discord RPC] Error:", err);
         }
         e.next();
     });
-
+  
     $app.onDiscordPresenceMangaActivityRequested((e) => {
         e.next();
     });
