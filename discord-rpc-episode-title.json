@@ -1,6 +1,6 @@
 {
   "id": "discord-rpc-episode-title",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "name": "Discord RPC Episode Title",
   "description": "Shows anime episode title with custom formats in Discord RPC",
   "author": "S1lent999",
