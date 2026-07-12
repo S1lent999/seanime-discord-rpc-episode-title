@@ -3,14 +3,13 @@
 /// <reference path="../../typings/app.d.ts" />
 /// <reference path="../../typings/core.d.ts" />
 
-//@ts-ignore
 function init() {
-    function isLinkDisabled() {
-        return $storage.has("disableLink") ? $storage.get<boolean>("disableLink") : true;
-    }
-
     $app.onDiscordPresenceAnimeActivityRequested((e) => {
         try {
+            function isLinkDisabled() {
+                return $storage.has("disableLink") ? $storage.get<boolean>("disableLink") : true;
+            }
+
             if (e.animeActivity && !e.animeActivity.isMovie) {
                 const animeTitle = e.animeActivity.title;
                 const episodeNumber = e.animeActivity.episodeNumber;
@@ -49,7 +48,7 @@ function init() {
             width: "260px",
         });
 
-        const disableLinkRef = ctx.fieldRef<boolean>(isLinkDisabled());
+        const disableLinkRef = ctx.fieldRef<boolean>($storage.has("disableLink") ? $storage.get<boolean>("disableLink") : true);
 
         disableLinkRef.onValueChange((value) => {
             $storage.set("disableLink", value);
@@ -61,7 +60,6 @@ function init() {
                     tray.text("Discord RPC Episode Title"),
                     tray.switch("Disable anime link (non-clickable)", { fieldRef: disableLinkRef }),
                 ],
-                gap: 8,
             });
         });
     });
